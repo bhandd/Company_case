@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Start";
+}
+
+<div class="text-center mt-5">
+    <h1 class="display-4">Välkommen till Company Biblioteket</h1>
+    <p class="lead">Ett modernt system för bokhantering.</p>
+    <hr class="my-4">
+    <p>Vad vill du göra idag?</p>
+    
+    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+        <a asp-controller="Library" asp-action="Index" class="btn btn-primary btn-lg px-4 gap-3">
+            Sök bland böcker
+        </a>
+        
+        <a asp-controller="Math" asp-action="Fibonacchi" class="btn btn-outline-secondary btn-lg px-4">
+            Fibonacci
+        </a>
+        <a asp-controller="Math" asp-action="Easter" class="btn btn-outline-secondary btn-lg px-4">
+            Påskdatum
+        </a>
+    </div>
+</div>

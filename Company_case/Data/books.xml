@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<catalog>
+   <book id="bk201">
+      <author>Andersson, Sara</author>
+      <title>Modern Webdesign</title>
+      <genre>Computer</genre>
+      <price>59.95</price>
+      <publish_date>2025-02-15</publish_date>
+      <description>En genomgång av moderna tekniker för att bygga responsiva och tillgängliga webbplatser.</description>
+   </book>
+   <book id="bk202">
+      <author>Berg, Johan</author>
+      <title>Skogens Hemligheter</title>
+      <genre>Fantasy</genre>
+      <price>12.50</price>
+      <publish_date>2024-11-02</publish_date>
+      <description>En ung vandrare upptäcker en bortglömd värld gömd djupt inne i den norrländska vildmarken.</description>
+   </book>
+   <book id="bk203">
+      <author>Lind, Maria</author>
+      <title>Kodens Arkitektur</title>
+      <genre>Computer</genre>
+      <price>45.00</price>
+      <publish_date>2025-01-10</publish_date>
+      <description>Strategier för att skapa skalbara och underhållbara system med hjälp av mikrotjänster.</description>
+   </book>
+   <book id="bk204">
+      <author>Ek, Peter</author>
+      <title>Stjärnornas Tystnad</title>
+      <genre>Science Fiction</genre>
+      <price>15.95</price>
+      <publish_date>2024-08-20</publish_date>
+      <description>En ensam pilot försöker tyda radiosignaler från en död planet vid galaxens kant.</description>
+   </book>
+   <book id="bk205">
+      <author>Holm, Karin</author>
+      <title>Sommaren vid Sjön</title>
+      <genre>Romance</genre>
+      <price>9.95</price>
+      <publish_date>2024-05-12</publish_date>
+      <description>Två gamla vänner återförenas under en varm sommar i den svenska skärgården.</description>
+   </book>
+   <book id="bk206">
+      <author>Sjöberg, Erik</author>
+      <title>Skuggor i Källaren</title>
+      <genre>Horror</genre>
+      <price>8.50</price>
+      <publish_date>2024-10-31</publish_date>
+      <description>En samling mörka berättelser om det som döljer sig i glömda utrymmen.</description>
+   </book>
+   <book id="bk207">
+      <author>Nyman, Elin</author>
+      <title>Stormens Öga</title>
+      <genre>Romance</genre>
+      <price>7.95</price>
+      <publish_date>2025-01-20</publish_date>
+      <description>En passionerad berättelse om kärlek som uppstår mitt under en pågående naturkatastrof.</description>
+   </book>
+   <book id="bk208">
+      <author>Falk, Viktor</author>
+      <title>Insekternas Rike</title>
+      <genre>Horror</genre>
+      <price>11.95</price>
+      <publish_date>2024-09-15</publish_date>
+      <description>Forskare hittar en ny typ av invasiv insekt som hotar att ta över staden.</description>
+   </book>
+   <book id="bk209">
+      <author>Wallin, Anna</author>
+      <title>Kvantumparadoxen</title>
+      <genre>Science Fiction</genre>
+      <price>18.95</price>
+      <publish_date>2024-12-05</publish_date>
+      <description>Ett experiment går fel och kastar huvudpersonen mellan olika dimensioner.</description>
+   </book>
+   <book id="bk210">
+      <author>Kjell, Mats</author>
+      <title>C# för Expertutvecklare</title>
+      <genre>Computer</genre>
+      <price>55.00</price>
+      <publish_date>2025-02-01</publish_date>
+      <description>Djupdykning i avancerade funktioner inom C# och .NET-ekosystemet.</description>
+   </book>
+   <book id="bk211">
+      <author>Fors, Jonas</author>
+      <title>Docker och Kubernetes</title>
+      <genre>Computer</genre>
+      <price>48.00</price>
+      <publish_date>2025-02-10</publish_date>
+      <description>En omfattande guide för att containerisera och orkestrera mikrotjänster.</description>
+   </book>
+   <book id="bk212">
+      <author>Larsson, Eva</author>
+      <title>Systemdesign 2026</title>
+      <genre>Computer</genre>
+      <price>62.95</price>
+      <publish_date>2026-01-05</publish_date>
+      <description>Hur man bygger framtidens distribuerade system med fokus på prestanda och säkerhet.</description>
+   </book>
+</catalog>

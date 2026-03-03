@@ -1,0 +1,107 @@
+@model Company_case.Models.Library.LibraryVm
+
+@{
+    ViewData["Title"] = "Bibliotek - Sök böcker";
+}
+
+<h2>Sök böcker</h2>
+
+<form asp-action="Search" method="get">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="SearchTitle">Titel</label>
+                <input asp-for="SearchTitle" class="form-control" placeholder="Sök på titel..." />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="SearchAuthor">Författare</label>
+                <input asp-for="SearchAuthor" class="form-control" placeholder="Sök på författare..." />
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="SearchGenre">Genre</label>
+                <input asp-for="SearchGenre" class="form-control" placeholder="Sök på genre..." />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="SearchId">ID</label>
+                <input asp-for="SearchId" class="form-control" placeholder="Sök på ID..." />
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="SearchPrice">Pris</label>
+                <input asp-for="SearchPrice" class="form-control" placeholder="Sök på pris..." />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="SearchPublishDate">Publiceringsdatum</label>
+                <input asp-for="SearchPublishDate" class="form-control" placeholder="t.ex. 2000 eller 2000-10" />
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="SearchDescription">Beskrivning</label>
+                <input asp-for="SearchDescription" class="form-control" placeholder="Sök i beskrivning..." />
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Sök</button>
+        <a asp-action="Index" class="btn btn-secondary">Rensa</a>
+    </div>
+</form>
+
+<hr />
+
+@if (Model.Books != null && Model.Books.Any())
+{
+    <h3>Resultat (@Model.Books.Count böcker)</h3>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titel</th>
+                <th>Författare</th>
+                <th>Genre</th>
+                <th>Pris</th>
+                <th>Publiceringsdatum</th>
+                <th>Beskrivning</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Genre</td>
+                    <td>@book.Price kr</td>
+                    <td>@book.Publish_date.ToString("yyyy-MM-dd")</td>
+                    <td>@book.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Model.Books != null)
+{
+    <p>Inga böcker hittades med de angivna sökfiltren.</p>
+}

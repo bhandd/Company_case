@@ -1,0 +1,67 @@
+﻿@model Company_case.Models.Math.EasterTrendVm
+
+@{
+ViewData["Title"] = "Påskstatistik";
+}
+
+<h2>Påskdatum - Statistik för 100 år</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4>Period: @Model.StartYear - @(Model.EndYear)</h4>
+
+        <table class="table table-bordered mt-3">
+            <thead>
+            <tr>
+                <th>Kategori</th>
+                <th>Antal år</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Påsk <strong>före</strong> 15 april</td>
+                <td>@Model.Before år</td>
+            </tr>
+            <tr>
+                <td>Påsk <strong>på</strong> 15 april</td>
+                <td>@Model.Same år</td>
+            </tr>
+            <tr>
+                <td>Påsk <strong>efter</strong> 15 april</td>
+                <td>@Model.After år</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="alert alert-info mt-4">
+            <h5>Slutsats:</h5>
+            <p>Under denna 100-årsperiod infaller påskdagen vanligast <strong>@Model.Trend 15 april</strong>.</p>
+        </div>
+
+        <h5 class="mt-4">Alla påskdatum:</h5>
+        <div style="max-height: 400px; overflow-y: auto;">
+            <table class="table table-striped table-sm">
+                <thead>
+                <tr>
+                    <th>År</th>
+                    <th>Påskdatum</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var easterDate in Model.EasterDates)
+                {
+                <tr>
+                    <td>@easterDate.Year</td>
+                    <td>@easterDate.ToString("yyyy-MM-dd (dddd)")</td>
+                </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h5>Om Gauss påskformel</h5>
+    <p>Gauss påskformel är en matematisk metod för att beräkna datumet för påskdagen i den gregorianska kalendern. Formeln utvecklades av Carl Friedrich Gauss och använder moduloräkning för att bestämma när påsken infaller varje år.</p>
+</div>

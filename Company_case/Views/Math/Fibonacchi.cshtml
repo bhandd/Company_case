@@ -1,0 +1,34 @@
+﻿@model Company_case.Models.Math.FibonacchiVm
+
+@{
+ViewData["Title"] = "Fibonacci-tal";
+}
+
+<h2>Fibonacci-tal kontroll</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Fibonacchi" method="post">
+            <div class="form-group">
+                <label asp-for="Input">Ange ett heltal:</label>
+                <input asp-for="Input" class="form-control" type="number" min="0" required />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Kontrollera</button>
+            </div>
+        </form>
+
+        @if (Model.IsFibonacchi != null)
+        {
+        <div class="alert @(Model.IsFibonacchi.Value ? "alert-success" : "alert-info") mt-3">
+            <h4>@Model.Message</h4>
+        </div>
+        }
+    </div>
+</div>
+
+<div class="mt-4">
+    <h5>Vad är Fibonacci-tal?</h5>
+    <p>Fibonacci-tal är en talföljd där varje tal är summan av de två föregående: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...</p>
+</div>
